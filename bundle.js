@@ -13410,7 +13410,7 @@ return jQuery;
 const playVideo = __webpack_require__(6);
 
 function openStream(cb) {
-    navigator.mediaDevices.getUserMedia({ audio: false, video: true })
+    navigator.mediaDevices.getUserMedia({ audio: true, video: true })
         .then(stream => {
             cb(stream);
         })
