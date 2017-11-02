@@ -1565,7 +1565,6 @@ const $ = __webpack_require__(15);
 const openStream = __webpack_require__(16);
 const playVideo = __webpack_require__(6);
 
-const connectionObj = {host :'streaminganvu.heroku.com',port :443,secure:true, key:'peerjs'}
     const peer = new Peer(getPeer(), connectionObj);
 
     $('#btnCall').click(() => {
