@@ -1573,7 +1573,7 @@ const connectionObj = {host :'streaminganvu.heroku.com',port :443,secure:true, k
         openStream(stream => {
             playVideo(stream, 'localStream');
             const call = peer.call(friendId, stream);
-            call.on('stream', remoteStream => playVideo(remoteStream, 'friendStream'));
+            call.on('stream', remoteStream => playVideo(remoteStream, 'localStream'));
         });
     });
 
