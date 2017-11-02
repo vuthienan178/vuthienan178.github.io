@@ -11828,7 +11828,7 @@ const getIceObject = __webpack_require__(17);
 
 getIceObject(iceConfig => {
     const connectionObj = {
-        host: 'stream2905.herokuapp.com',
+        host: 'streaminganvu.herokuapp.com',
         port: 443,
         secure: true,
         key: 'peerjs',
