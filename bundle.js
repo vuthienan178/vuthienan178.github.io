@@ -1570,6 +1570,7 @@ const playVideo = __webpack_require__(6);
     $('#btnCall').click(() => {
         const friendId = $('#txtFriendId').val();
         openStream(stream => {
+            console.log(stream);
             playVideo(stream, 'localStream');
             const call = peer.call(friendId, stream);
             call.on('stream', remoteStream => playVideo(remoteStream, 'friendStream'));
