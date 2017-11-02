@@ -1548,7 +1548,7 @@ module.exports = Negotiator;
 function playVideo(stream, idVideo) {
     const video = document.getElementById(idVideo);
     video.srcObject = stream;
-    video.onloadedmetadata = function () {
+    video.onloadedmetadata = function() {
         video.play();
     };
 }
@@ -13410,7 +13410,7 @@ return jQuery;
 const playVideo = __webpack_require__(6);
 
 function openStream(cb) {
-    navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+    navigator.mediaDevices.getUserMedia({ audio: true, video: false })
         .then(stream => {
             cb(stream);
         })
