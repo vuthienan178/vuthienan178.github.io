@@ -15104,7 +15104,7 @@ const playVideo = __webpack_require__(16);
 const getIceObject = __webpack_require__(38);
 const io = __webpack_require__(39);
 
-const socket = io('http://streaminganvu.herokuapp.com');
+const socket = io('https://streaminganvu.herokuapp.com');
 
 
 getIceObject(iceConfig => {
