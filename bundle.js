@@ -15104,12 +15104,12 @@ const playVideo = __webpack_require__(16);
 const getIceObject = __webpack_require__(38);
 const io = __webpack_require__(39);
 
-const socket = io('https://streaminganvu.herokuapp.com');
+const socket = io('https://rtcstream.herokuapp.com');
 
 
 getIceObject(iceConfig => {
     const connectionObj = {
-        host: 'streaminganvu.herokuapp.com',
+        host: 'rtcstream.herokuapp.com',
         port: 443,
         secure: true,
         key: 'peerjs',
@@ -15119,7 +15119,6 @@ getIceObject(iceConfig => {
     socket.emit('NEW_PEER_ID',peerId);
     const peer = new Peer(peerId, connectionObj);
 
-    console.log(iceConfig);
 
     $('#ulPeerId').on('click','li',function(){
         const peerId = $(this).text();
@@ -15129,7 +15128,7 @@ getIceObject(iceConfig => {
             call.on('stream', remoteStream => playVideo(remoteStream, 'friendStream'));
         });
     });
-     
+    
     $('#btnCall').click(() => {
         const friendId = $('#txtFriendId').val();
         openStream(stream => {
