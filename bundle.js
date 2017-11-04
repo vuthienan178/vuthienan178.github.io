@@ -15104,7 +15104,7 @@ const playVideo = __webpack_require__(16);
 const getIceObject = __webpack_require__(38);
 const io = __webpack_require__(39);
 
-const socket = io('https://streaminganvu.herokuapp.com');
+const socket = io('http://streaminganvu.herokuapp.com');
 
 
 getIceObject(iceConfig => {
@@ -15128,7 +15128,7 @@ getIceObject(iceConfig => {
             call.on('stream', remoteStream => playVideo(remoteStream, 'friendStream'));
         });
     });
-    /* 
+     
     $('#btnCall').click(() => {
         const friendId = $('#txtFriendId').val();
         openStream(stream => {
@@ -15136,7 +15136,7 @@ getIceObject(iceConfig => {
             const call = peer.call(friendId, stream);
             call.on('stream', remoteStream => playVideo(remoteStream, 'friendStream'));
         });
-    }); */
+    }); 
 
     peer.on('call', call => {
         openStream(stream => {
