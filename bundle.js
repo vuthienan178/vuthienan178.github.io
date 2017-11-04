@@ -13415,7 +13415,7 @@ function uid(len) {
 const playVideo = __webpack_require__(7);
 
 function openStream(cb) {
-    navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+    navigator.mediaDevices.getUserMedia({ audio: true, video: false })
         .then(stream => {
             cb(stream);
         })
