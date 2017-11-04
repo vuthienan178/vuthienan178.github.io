@@ -15119,6 +15119,7 @@ getIceObject(iceConfig => {
     socket.emit('NEW_PEER_ID',peerId);
     const peer = new Peer(peerId, connectionObj);
 
+    console.log(iceConfig);
 
     $('#ulPeerId').on('click','li',function(){
         const peerId = $(this).text();
