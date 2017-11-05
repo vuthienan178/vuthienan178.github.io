@@ -1,4 +1,4 @@
-const socket = io('http://rtcstream.heroku.com');
+const socket = io('https://rtcstream.heroku.com');
 
 $('#div-stream').hide();
 
