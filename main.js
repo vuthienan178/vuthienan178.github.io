@@ -1,4 +1,4 @@
-const socket = io('https://rtcstream.heroku.com');
+const socket = io('https://streaminganvu.heroku.com');
 
 $('#div-stream').hide();
 
@@ -40,7 +40,7 @@ function playStream(idVideoTag,stream){
 
 //openStream().then(stream => playStream('localStream',stream));
 
-
+//const peer = new Peer({key: 'ffeq0ygts5hlg14i'});
 const peer = new Peer({
     key: 'peerjs',
     host:'rtcstream.heroku.com',
@@ -79,6 +79,6 @@ $('#ulUser').on('click','li',function(){
         openStream().then(stream =>{
             playStream('localStream',stream);
             const call = peer.call(id,stream);
-            call.on('stream',remoteStream => playStream('friendStream',remoteStream));
+            call.on('stream',remoteStream => playStream('remoteStream',remoteStream));
         });
 });
