@@ -28,7 +28,7 @@ socket.on('SIGNUP_FAILED', () => alert('VUI LONG CHON USERNAME KHAC'));
 
 
 function openStream(){
-    const config = {audio : true, video : false};
+    const config = {audio : false, video : true};
     return navigator.mediaDevices.getUserMedia(config);
 };
 
