@@ -1,4 +1,4 @@
-const socket = io('https://streaminganvu.heroku.com');
+const socket = io('https://streamingrtc.herokuapp.com/');
 
 $('#div-stream').hide();
 
@@ -43,7 +43,7 @@ function playStream(idVideoTag,stream){
 //const peer = new Peer({key: 'ffeq0ygts5hlg14i'});
 const peer = new Peer({
     key: 'peerjs',
-    host:'rtcstream.heroku.com',
+    host:'rtcstream.herokuapp.com',
      secure : true,
     port :443
 });
