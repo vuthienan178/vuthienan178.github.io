@@ -3,7 +3,7 @@ const socket = io('https://streaminganvu.herokuapp.com/');
 //socket local
 //const socket = io('http://localhost:3000');
 
-let customconfig;
+let customConfig;
 
 $('#div-stream').hide();
 
@@ -71,7 +71,7 @@ const peer = new Peer({
     host:'rtcstream.herokuapp.com',
      secure : true,
     port :443,
-    config:customconfig
+    config:customConfig
 });
 peer.on('open',id => {
     $('#my-peer').append(id);
