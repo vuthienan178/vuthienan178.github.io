@@ -17,12 +17,12 @@ $.ajax({
         room:"default",
         secure:1
     },
-    success: function(data,status){
+    success: function (data,status){
             customconfig = data.d;
             console.log(customconfig);
     },
     async: false
-})
+});
 
 
 socket.on('ONLINE_USER_ARRAY',arrUser =>{
