@@ -1,7 +1,7 @@
   // socket online
-//const socket = io('https://streaminganvu.herokuapp.com');
+const socket = io('https://streaminganvu.herokuapp.com');
 //socket local
-const socket = io('http://localhost:3000');
+//const socket = io('http://localhost:3000');
 
 let customconfig;
 
