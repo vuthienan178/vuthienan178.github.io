@@ -20,6 +20,7 @@ $.ajax({
   success: function (data, status) {
     // data.d is where the iceServers object lives
     customConfig = data.d;
+    console.log(data);
     console.log(customConfig);
   },
   async: false
