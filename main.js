@@ -8,7 +8,7 @@ let customconfig;
 $('#div-stream').hide();
 
 $.ajax({
-    url:"",
+    url:"https://service.xirsys.com/ice",
     data:{
         ident:"vuthienan178",
         secret:"7ed096e8-bfd3-11e7-981e-3a716423545a",
