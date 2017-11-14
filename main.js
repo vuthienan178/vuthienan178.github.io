@@ -1,5 +1,5 @@
   // socket online
-const socket = io('https://streaminganvu.herokuapp.com');
+const socket = io('https://streaminganvu.herokuapp.com/');
 //socket local
 //const socket = io('http://localhost:3000');
 
@@ -8,20 +8,21 @@ let customconfig;
 $('#div-stream').hide();
 
 $.ajax({
-    url:"https://service.xirsys.com/ice",
-    data:{
-        ident:"vuthienan178",
-        secret:"7ed096e8-bfd3-11e7-981e-3a716423545a",
-        domain:"vuthienan178.github.io",
-        application:"default",
-        room:"default",
-        secure:1
-    },
-    success: function (data,status){
-            customconfig = data.d;
-            console.log(customconfig);
-    },
-    async: false
+  url: "https://service.xirsys.com/ice",
+  data: {
+    ident: "vuthienan178",
+    secret: "7ed096e8-bfd3-11e7-981e-3a716423545a",
+    domain: "vuthienan178.github.io",
+    application: "default",
+    room: "default",
+    secure: 1
+  },
+  success: function (data, status) {
+    // data.d is where the iceServers object lives
+    customConfig = data.d;
+    console.log(customConfig);
+  },
+  async: false
 });
 
 
