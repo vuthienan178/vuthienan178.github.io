@@ -22,6 +22,7 @@ $.ajax({
     customConfig = data.d;
     console.log(data);
     console.log(customConfig);
+    console.log(status);
   },
   async: false
 });
